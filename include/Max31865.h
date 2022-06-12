@@ -61,7 +61,7 @@ class Max31865 {
   static const char *errorToString(Max31865Error error);
 
   Max31865(int miso, int mosi, int sck, int cs, int drdy = -1,
-           spi_host_device_t host = HSPI_HOST);
+           spi_host_device_t host = SPI2_HOST);
   ~Max31865();
 
   esp_err_t begin(max31865_config_t config);
