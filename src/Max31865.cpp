@@ -1,9 +1,11 @@
 #include "Max31865.h"
+
 #include <driver/gpio.h>
 #include <esp_log.h>
 #include <freertos/task.h>
-#include <math.h>
-#include <string.h>
+
+#include <cmath>
+#include <cstring>
 #include <climits>
 
 static const char *TAG = "Max31865";
