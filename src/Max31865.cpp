@@ -270,8 +270,9 @@ esp_err_t Max31865::getRTD(uint16_t *rtd, Max31865Error *fault) {
   if (static_cast<bool>(rtdBytes[1] & 1U)) {
     *rtd = 0;
     if (fault == nullptr) {
-      auto tmp = Max31865Error::NoError;
-      fault = &tmp;
+ //     auto tmp = Max31865Error::NoError;
+ //     fault = &tmp;
+        *fault =  Max31865Error::NoError;
     }
     readFaultStatus(fault);
     ESP_LOGW(TAG, "Sensor fault detected: %s", errorToString(*fault));
